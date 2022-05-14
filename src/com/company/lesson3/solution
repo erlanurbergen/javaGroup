@@ -1,0 +1,31 @@
+// Даны положительные числа A и B (A > B).
+        // На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений).
+        // Не используя операции умножения и деления, найти длину незанятой части отрезка A.
+
+
+int firstNumber = sc.nextInt();
+        int secondNumber = sc.nextInt();
+
+        int result = firstNumber - secondNumber; // 10 - 4 = 6
+        if (firstNumber > 0 && secondNumber > 0) {
+            while (result > secondNumber){
+                result = result - secondNumber;
+            }
+        }
+
+        System.out.println(result);
+
+
+        // 2 task
+                // Дано целое число N (> 0), являющееся некоторой степенью числа 2: N = 2K.
+                // Найти целое число K — показатель этой степени.
+
+                int degree = sc.nextInt(); // 16 2 4
+                int count = 0;
+                degree = degree / 2; // 8
+                while (degree > 0){
+                    degree = degree / 2;
+                   count++;
+                }
+
+                System.out.println(count);
